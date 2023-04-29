@@ -2,18 +2,87 @@
 <html>
     <head>
         <title>Under Construction!</title>
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/css/cookieconsent.min.css" /> -->
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+        <script>
+
+            window.cookieconsent.initialise({
+                container: document.getElementById("footer"),
+                palette:{
+                    popup: {background: "#fff"},
+                    button: {background: "chocolate"},
+                },
+                revokable: false,
+                onStatusChange: function(status) {
+                    console.log(this.hasConsented() ?
+                        'enable cookies' : 'disable cookies');
+                },
+                law: {
+                    regionalLaw: false,
+                },
+
+
+                location: {
+                    timeout: 0,
+                    services: ['noop', 'info'],
+                    serviceDefinitions: {
+                        noop: function(options) {
+                            return {
+                                url: window.location.href,
+
+                                callback: function(done, response) {
+                                    return {code: 'HU'}
+                                }
+                            }
+                        },
+                        info: function(options) {
+                            return {
+                                url: 'https://api.ipapi.com/api/?access_key=012345566789',
+                                callback: function(done, response) {
+                                    try {
+                                        var json = JSON.parse(response);
+                                        console.log('IP info response: ' + response)
+                                        if (json.country_code) {
+                                            return {code: json.countryCode}
+                                        }
+                                        console.log('No countrycode from the location service')
+                                        throw 'Could not find a country code in the response'
+                                    } catch(err) {
+                                        return new Error('Invalid response (' + err + ')')
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+
+
+                content: {
+                    header: "Sütik az oldalon",
+                    message: "Az oldal sütiket használ analitikára és alapvető funkciókra",
+                    dismiss: "Értettem",
+                    link: "Tudj meg többet a sütikről",
+                    href: "https://gdprmost.hu/cookie-tajekoztato",
+                    target: '_blank',
+                }
+            });
+        </script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1X25Q6X1Z"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-E1X25Q6X1Z');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-E1X25Q6X1Z');
+/* */
         </script>
     </head>
     <body>
         <h1>Page under Construction</h1>
         Please come back later!
+        <!-- <div id="content"></div> -->
+        <!-- <div id="footer"></div> -->
     </body>
 </html>
