@@ -6,7 +6,13 @@ h1 {
     font-family: "Noto Serif Display", Serif;
     font-weight: bolder;
 }
+button {
+    font-family: "Noto Serif Display", sans-serif;
+}
 
+#cookie-banner {
+    font-family: "Noto Serif Display", sans-serif;
+}
 @media screen and (max-width: 1080px) {
 
     .logo {
@@ -118,4 +124,24 @@ h1 {
         bottom: 10pt;
     }
 
+}
+
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#cookie-accept {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }
