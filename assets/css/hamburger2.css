@@ -4,16 +4,26 @@ html, body {
   height: 100%;
 }
 
+@font-face {
+  font-family: "Noto Sans";
+  src: url(/assets/fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+}
+@font-face {
+  font-family: "Noto Serif Display";
+  src: url(/assets/fonts/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+}
+
 * {
-    /* font-family: "Noto Serif Display", Serif; */
   box-sizing: border-box;
 }
 section {
   min-height: 100%;
   /* margin-bottom: 20pt; */
 }
+
 h2 {
     font-family: "Noto Serif Display", Bold;
+
     font-size: 32pt;
     color: #541913;
     vertical-align: center;
@@ -44,6 +54,16 @@ p {
     padding: 30px 22px 22px 30px;
 }
 
+.center {
+    font-family: "Noto Sans", Regular;
+    text-transform: uppercase;
+    font-size: 16pt;
+    text-align: center;
+    color: #541913;
+    padding-bottom: 0px;
+    align-content: center;
+}
+
 section .program {
   text-align: center;
 }
@@ -59,21 +79,13 @@ section .program p {
   margin: 0;
   padding: 0;
 }
-.center {
-    font-family: "Noto Serif Display", Serif;
-    font-size: 16pt;
-    text-align: center;
-    color: #541913;
-    padding-bottom: 0px;
-    align-content: center;
-}
 
 .heart {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    padding-bottom: 50px;
+    padding: 50px;
 }
 
 .heart img {
@@ -187,6 +199,9 @@ section .program p {
 #menu-toggle:checked ~ .logo .logo-inactive {
     display: none;
 }
+/* .bell {
+  display: none;
+} */
 .bell .bell-inactive,
 #menu-toggle:checked ~ .bell .bell-active {
     display: block;
