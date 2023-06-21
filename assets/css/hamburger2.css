@@ -2,6 +2,10 @@
 html, body {
   margin: 0;
   height: 100%;
+  max-width: 700px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @font-face {
@@ -114,6 +118,9 @@ section .program p {
     margin-bottom: 0px;
 }
 .top-nav {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
     background: white;
     color: #C57F5F;
     position: fixed;
@@ -289,7 +296,7 @@ section .program p {
 }
 
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) { */
   .menu-button-container {
     display: flex;
   }
@@ -302,6 +309,12 @@ section .program p {
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+  @media (min-width: 700px) {
+    .top-nav {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   #menu-toggle ~ .menu li {
     height: 0;
@@ -328,4 +341,4 @@ section .program p {
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
-}
+/* } */
