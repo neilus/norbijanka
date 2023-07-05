@@ -30,12 +30,16 @@
 
 </head>
 
-<body>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<body onload="cookieClicker()">
+
+    <div id="cookie-banner">
+        <p>A weboldal sütiket használ.</p>
+        <button id="cookie-accept">Értettem</button>
+    </div>
     <nav class="top-nav">
         <div class="container">
 
-            <input id="menu-toggle" type="checkbox" onclick="toggleActive()"/>
+            <input id="menu-toggle" type="checkbox" onclick="toggleActive()" />
             <label class='menu-button-container' for="menu-toggle">
                 <div class='menu-button'></div>
             </label>
@@ -45,7 +49,7 @@
                 <img class="logo logo-active" type="image/svg" src="/assets/nj_white.svg" alt="NJ Logo">
             </picture>
 
-            <picture class="notifications bell" alt="Bell Icon" >
+            <picture class="notifications bell" alt="Bell Icon">
                 <img class="bell bell-inactive" type="image/svg" src="/assets/bell-dark.svg" alt="Bell Icon">
                 <img class="bell bell-active" type="image/svg" src="/assets/bell-white.svg" alt="Bell Icon">
             </picture>
@@ -60,136 +64,143 @@
         </div>
     </nav>
 
-    <picture class="hero-container">
-        <!-- <img class="hero" src="/assets/golden_hour/photo_2018-07-07_13-51-23.png" alt="Golden hour"> -->
-        <div class="hero-content"></div>
-    </picture>
-    <section>
-        <h2 id="top">Janka & Norbi</h2>
-        <p>
-            Közeleg a nagy napunk! Több mint hét együtt töltött év, négy költözés, öt Ördögkatlan és megszámlálhatatlan közös koncertélmény után szeretnénk megerősíteni a kettőnk közötti köteléket és nagyon örülnénk, ha Ti is velünk ünnepelnétek!
-        </p>
-        <p class="center">
-            Szeptember 15. 17:00
-        </p>
-        <h3>Café Ponyvaregény</h3>
-        <p>
-            Kérünk Benneteket, hogy jelezzétek, ha velünk tartotok ezen a megismételhetetlen napon! Garantáljuk, hogy vidámságból és jó zenéből nem lesz hiány! Addig is nézzetek körül az oldalon. Itt minden információt megtaláltok ahhoz, hogy teljesen felkészülve várjátok a ceremóniát.
-        </p>
-        <picture class="heart">
-            <img src="/assets/heart.svg" alt="heart">
-        </picture>
-    </section>
+    <article class="scroller">
 
-    <!-- <h2 id="location">Helyszín</h2>
-    <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, assumenda? Pariatur, magni in exercitationem nihil omnis eveniet quisquam molestias aliquam ducimus voluptate at unde a dicta, ad nobis, maiores perspiciatis.
-    </p> -->
-    <section>
-        <section class="program">
-            <h2 id="programe">Menetrend</h2>
-            <p class="center">
-            Szeptember 15. 17:00
+        <section class="snapper">
+            <header>
+                <div class="behind-top-nav"></div>
+                <picture class="hero-container">
+                    <!-- <img class="hero" src="/assets/golden_hour/photo_2018-07-07_13-51-23.png" alt="Golden hour"> -->
+                    <div class="hero-content snap"></div>
+                </picture>
+            </header>
+            <h2 id="top" class="section snap">Janka & Norbi</h2>
+            <p>
+                Közeleg a nagy napunk! Több mint hét együtt töltött év, négy költözés, öt Ördögkatlan és
+                megszámlálhatatlan közös koncertélmény után szeretnénk megerősíteni a kettőnk közötti köteléket és
+                nagyon örülnénk, ha Ti is velünk ünnepelnétek!
+            </p>
+            <p class="center snap">
+                Szeptember 15. 17:00
             </p>
             <h3>Café Ponyvaregény</h3>
-        </section>
-
-        <section class="program">
+            <p>
+                Kérünk Benneteket, hogy jelezzétek, ha velünk tartotok ezen a megismételhetetlen napon! Garantáljuk,
+                hogy vidámságból és jó zenéből nem lesz hiány! Addig is nézzetek körül az oldalon. Itt minden
+                információt megtaláltok ahhoz, hogy teljesen felkészülve várjátok a ceremóniát.
+            </p>
             <picture class="heart">
                 <img src="/assets/heart.svg" alt="heart">
             </picture>
-            <picture>
-                <img src="/assets/ceremonia.svg" alt="ceremonia">
-            </picture>
-            <p>
-                17:30
-            </p>
-            <p>
-                Ceremónia
-            </p>
         </section>
 
-        <section class="program">
+        <!-- <h2 id="location">Helyszín</h2>
+    <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, assumenda? Pariatur, magni in exercitationem nihil omnis eveniet quisquam molestias aliquam ducimus voluptate at unde a dicta, ad nobis, maiores perspiciatis.
+    </p> -->
+        <section class="snapper">
+            <section class="program">
+                <h2 id="programe" class="section snap">Menetrend</h2>
+                <p class="center">
+                    Szeptember 15. 17:00
+                </p>
+                <h3>Café Ponyvaregény</h3>
+            </section>
+
+            <section class="program">
+                <picture class="heart">
+                    <img src="/assets/heart.svg" alt="heart">
+                </picture>
+                <picture>
+                    <img src="/assets/ceremonia.svg" alt="ceremonia">
+                </picture>
+                <p>
+                    17:30
+                </p>
+                <p>
+                    Ceremónia
+                </p>
+            </section>
+
+            <section class="program">
+                <picture class="heart">
+                    <img src="/assets/heart.svg" alt="heart">
+                </picture>
+                <picture>
+                    <img src="/assets/fotozas.svg" alt="fotozas">
+                </picture>
+                <p>
+                    18:00
+                </p>
+                <p>
+                    Fotózás
+                </p>
+            </section>
+
+            <section class="program">
+                <picture class="heart">
+                    <img src="/assets/heart.svg" alt="heart">
+                </picture>
+                <picture>
+                    <img src="/assets/vacsora.svg" alt="vacsora">
+                </picture>
+                <p>
+                    19:00
+                </p>
+                <p>
+                    Vacsora
+                </p>
+            </section>
+
+            <section class="program">
+                <picture class="heart">
+                    <img src="/assets/heart.svg" alt="heart">
+                </picture>
+                <picture>
+                    <img src="/assets/torta.svg" alt="torta">
+                </picture>
+                <p>
+                    23:00
+                </p>
+                <p>
+                    Torta
+                </p>
+            </section>
+
+            <section class="program">
+                <picture class="heart">
+                    <img src="/assets/heart.svg" alt="heart">
+                </picture>
+                <picture>
+                    <img src="/assets/parti-vege.svg" alt="parti vége">
+                </picture>
+                <p>
+                    3:00
+                </p>
+                <p>
+                    Parti vége
+                </p>
+            </section>
             <picture class="heart">
                 <img src="/assets/heart.svg" alt="heart">
             </picture>
-            <picture>
-                <img src="/assets/fotozas.svg" alt="fotozas">
-            </picture>
-            <p>
-                18:00
-            </p>
-            <p>
-                Fotózás
-            </p>
         </section>
 
-        <section class="program">
+        <section class="snapper">
+            <h2 id="menu" class="section snap">Menü</h2>
+            <p>
+                Részletes menü és ételérzékenységeket, egyéni igényeket gyűjtő űrlap hamarosan.
+            </p>
             <picture class="heart">
                 <img src="/assets/heart.svg" alt="heart">
             </picture>
-            <picture>
-                <img src="/assets/vacsora.svg" alt="vacsora">
-            </picture>
-            <p>
-                19:00
-            </p>
-            <p>
-                Vacsora
-            </p>
         </section>
-
-        <section class="program">
-            <picture class="heart">
-                <img src="/assets/heart.svg" alt="heart">
-            </picture>
-            <picture>
-                <img src="/assets/torta.svg" alt="torta">
-            </picture>
-            <p>
-                23:00
-            </p>
-            <p>
-                Torta
-            </p>
-        </section>
-
-        <section class="program">
-            <picture class="heart">
-                <img src="/assets/heart.svg" alt="heart">
-            </picture>
-            <picture>
-                <img src="/assets/parti-vege.svg" alt="parti vége">
-            </picture>
-            <p>
-                3:00
-            </p>
-            <p>
-                Parti vége
-            </p>
-        </section>
-        <picture class="heart">
-            <img src="/assets/heart.svg" alt="heart">
-        </picture>
-    </section>
-    <section>
-        <h2 id="menu">Menü</h2>
-        <p>
-            Részletes menü és ételérzékenységeket, egyéni igényeket gyűjtő űrlap hamarosan.
-        </p>
-        <picture class="heart">
-            <img src="/assets/heart.svg" alt="heart">
-        </picture>
-    </section>
-    <!-- <h2 id="accomodation">Szállás</h2>
+        <!-- <h2 id="accomodation">Szállás</h2>
     <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, assumenda? Pariatur, magni in exercitationem nihil omnis eveniet quisquam molestias aliquam ducimus voluptate at unde a dicta, ad nobis, maiores perspiciatis.
     </p> -->
 
-    <div id="cookie-banner">
-        <p id="cookie-message">A weboldal sütiket használ.</p>
-        <button id="cookie-accept">Értettem</button>
-    </div>
+    </article>
 </body>
 
 </html>

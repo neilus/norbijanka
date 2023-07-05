@@ -9,6 +9,16 @@ h1 {
 button {
     font-family: "Noto Serif Display", sans-serif;
 }
+@font-face {
+  font-family: "Noto Sans";
+  src: url(/assets/fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Noto Serif Display";
+  src: url(/assets/fonts/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+}
+
 
 @media screen and (max-width: 1080px) {
 
@@ -122,4 +132,3 @@ button {
     }
 
 }
-

@@ -1,17 +1,20 @@
 /* @import url(https://fonts.googleapis.com/css?family=Raleway); */
-html, body {
+html,
+body {
   margin: 0;
   height: 100%;
   max-width: 700px;
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+  scroll-behavior: smooth;
 }
 
 @font-face {
   font-family: "Noto Sans";
   src: url(/assets/fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
 }
+
 @font-face {
   font-family: "Noto Serif Display";
   src: url(/assets/fonts/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
@@ -20,58 +23,62 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
 section {
   min-height: 100%;
   /* margin-bottom: 20pt; */
 }
 
 h2 {
-    font-family: "Noto Serif Display", Bold;
+  font-family: "Noto Serif Display", Bold;
 
-    font-size: 32pt;
-    color: #541913;
-    vertical-align: center;
-    text-align: center;
+  font-size: 32pt;
+  color: #541913;
+  vertical-align: center;
+  text-align: center;
 
-    margin-top: 0;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    margin-bottom: 0px;
-    background-image: url("/assets/mist_background/background.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+  margin-top: 0;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+  background-image: url("/assets/mist_background/background.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
-h3{
-    font-family: "Noto Serif Display", Bold Italic;
-    font-size: 20pt;
-    font-style: italic;
-    text-align: center;
-    color: #541913;
-    padding-top: 0px;
+
+h3 {
+  font-family: "Noto Serif Display", Bold Italic;
+  font-size: 20pt;
+  font-style: italic;
+  text-align: center;
+  color: #541913;
+  padding-top: 0px;
 }
 
 p {
-    font-family: "Noto Sans", Regular;
-    font-size: 16pt;
-    color: #541913;
-    padding: 30px 22px 22px 30px;
+  font-family: "Noto Sans", Regular;
+  font-size: 16pt;
+  color: #541913;
+  padding: 30px 22px 22px 30px;
 }
 
 .center {
-    font-family: "Noto Sans", Regular;
-    text-transform: uppercase;
-    font-size: 16pt;
-    text-align: center;
-    color: #541913;
-    padding-bottom: 0px;
-    align-content: center;
+  font-family: "Noto Sans", Regular;
+  text-transform: uppercase;
+  font-size: 16pt;
+  text-align: center;
+  color: #541913;
+  padding-bottom: 0px;
+  align-content: center;
 }
+
 
 section .program {
   text-align: center;
 }
-section .program > picture {
+
+section .program>picture {
   /* margin: 64px; */
   /* padding: 32px; */
   padding: 32px;
@@ -79,71 +86,85 @@ section .program > picture {
   margin-right: auto;
   margin-left: auto;
 }
+
 section .program p {
   margin: 0;
   padding: 0;
 }
 
 .heart {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 50px;
 }
 
 .heart img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 50%; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
 }
 
-.hero-content{
+.hero-content {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (max-width: 700px) {
     background-image: url("/assets/golden_hour/photo_2018-07-07_13-51-23.png");
-    margin-top: 56px;
     background-size: 498px 249px;
-    background-position-x: center;
-    min-height: 190px;
-    max-height: 249px;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    height: 249px;
+  }
+
+  @media (min-width: 700px) {
+    background-image: url("/assets/golden_hour/photo_2018-07-07_13-51-23@2x.png");
+    /* background-size: 996px 598px; */
+    height: 320px;
+  }
+}
+
+.behind-top-nav {
+  height: 56px;
 }
 
 .hero {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
+
 .top-nav {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-    background: white;
-    color: #C57F5F;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    /* z-index: 100; */
-    width: 100%;
-    height: 56px;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    border-bottom: 1px solid #333;
-    transition: background 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Raleway";
-    font-size: 16pt;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
+  background: white;
+  color: #C57F5F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* z-index: 100; */
+  width: 100%;
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #333;
+  transition: background 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+  font-size: 16pt;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
 }
+
 .notifications {
   fill: red;
   /* height: 56px;
@@ -151,71 +172,75 @@ section .program p {
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-    padding: 1em;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 1em;
+}
 
 
-  .top-nav .drop {
-    color: white;
-    background: #C57F5F;
-    height: 56px;
-  }
+.top-nav .drop {
+  color: white;
+  background: #C57F5F;
+  height: 56px;
+}
 
-  .top-nav .logo {
-    height: 32pt;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.top-nav .logo {
+  height: 32pt;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
-  }
+}
 
-  .logo {
-    /* align logo to the center */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* make logo take up all available space */
-    flex-grow: 1;
-    /* make logo take up all available height */
-    height: 56px;
-    /* make logo take up all available width */
-    width: 100%;
-    /* make logo take up all available space */
-    margin: 0;
-    padding: 0;
-    /* make logo take up all available space */
-    box-sizing: border-box;
-    /* make logo take up all available space */
-    position: relative;
-    /* make logo take up all available space */
-    overflow: hidden;
-    /* make logo take up all available space */
+.logo {
+  /* align logo to the center */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* make logo take up all available space */
+  flex-grow: 1;
+  /* make logo take up all available height */
+  height: 56px;
+  /* make logo take up all available width */
+  width: 100%;
+  /* make logo take up all available space */
+  margin: 0;
+  padding: 0;
+  /* make logo take up all available space */
+  box-sizing: border-box;
+  /* make logo take up all available space */
+  position: relative;
+  /* make logo take up all available space */
+  overflow: hidden;
+  /* make logo take up all available space */
 
 
 }
+
 .logo .logo-inactive,
-#menu-toggle:checked ~ .logo .logo-active {
-    display: block;
+#menu-toggle:checked~.logo .logo-active {
+  display: block;
 }
+
 .logo .logo-active,
-#menu-toggle:checked ~ .logo .logo-inactive {
-    display: none;
+#menu-toggle:checked~.logo .logo-inactive {
+  display: none;
 }
+
 /* .bell {
   display: none;
 } */
 .bell .bell-inactive,
-#menu-toggle:checked ~ .bell .bell-active {
-    display: block;
+#menu-toggle:checked~.bell .bell-active {
+  display: block;
 }
+
 .bell .bell-active,
-#menu-toggle:checked ~ .bell .bell-inactive {
-    display: none;
+#menu-toggle:checked~.bell .bell-inactive {
+  display: none;
 }
 
 
@@ -227,17 +252,18 @@ section .program p {
   padding: 0;
 }
 
-.menu > li {
+.menu>li {
   margin: 0 1rem;
   overflow: hidden;
 }
+
 .menu a,
 .menu a:visited {
-    color: white;
-    text-decoration: none;
-    font-family: "Raleway";
-    width: 100%;
-    text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: "Raleway";
+  width: 100%;
+  text-align: center;
 }
 
 .menu-button-container {
@@ -279,65 +305,84 @@ section .program p {
 }
 
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
+#menu-toggle:checked+.menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
   background: white;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
-    background: #C57F5F;
+#menu-toggle:checked+.menu-button-container .menu-button {
+  background: #C57F5F;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::after {
+#menu-toggle:checked+.menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
   background: white;
 }
 
-/* @media (max-width: 700px) { */
-  .menu-button-container {
-    display: flex;
+@media (max-width: 700px) {
+  .scroller {
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
   }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 56px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+
+  .scroller>section {
+    scroll-snap-align: start;
   }
-  @media (min-width: 700px) {
-    .top-nav {
-      margin-left: auto;
-      margin-right: auto;
-    }
+}
+
+.menu-button-container {
+  display: flex;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  margin-top: 56px;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .top-nav {
+    margin-left: auto;
+    margin-right: auto;
   }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #C57F5F;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
+}
+
+#menu-toggle~.menu li {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#menu-toggle:checked~.menu li {
+  border: 1px solid #333;
+  height: 2.5em;
+  padding: 0.5em;
+  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu>li {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5em 0;
+  width: 100%;
+  color: white;
+  background-color: #C57F5F;
+}
+
+.menu>li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+
 /* } */
