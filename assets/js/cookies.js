@@ -26,16 +26,19 @@ function getCookie(cname) {
 // Function to hide the cookie banner
 function hideBanner() {
     document.getElementById("cookie-banner").style.display = "none";
+    // document.getElementById("cookie-banner").style.visibility = "hidden";
 }
 
-// Check if the cookie is set
-var cookieAccepted = getCookie("cookieAccepted");
-if (cookieAccepted) {
-    hideBanner();
-}
+function cookieClicker() {
+    // Check if the cookie is set
+    var cookieAccepted = getCookie("cookieAccepted");
+    if (cookieAccepted) {
+        hideBanner();
+    }
 
-// Add event listener to the "Accept" button
-document.getElementById("cookie-accept").addEventListener("click", function () {
-    setCookie("cookieAccepted", true, 365);
-    hideBanner();
-});
+    // Add event listener to the "Accept" button
+    document.getElementById("cookie-accept").addEventListener("click", function () {
+        setCookie("cookieAccepted", true, 365);
+        hideBanner();
+    });
+}

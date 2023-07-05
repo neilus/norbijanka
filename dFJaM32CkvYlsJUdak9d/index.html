@@ -30,9 +30,12 @@
 
 </head>
 
-<body>
+<body onload="cookieClicker()">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div id="cookie-banner">
+        <p>A weboldal sütiket használ.</p>
+        <button id="cookie-accept">Értettem</button>
+    </div>
     <nav class="top-nav">
         <div class="container">
 
@@ -61,15 +64,16 @@
         </div>
     </nav>
 
-    <header>
-        <picture class="hero-container">
-            <!-- <img class="hero" src="/assets/golden_hour/photo_2018-07-07_13-51-23.png" alt="Golden hour"> -->
-            <div class="hero-content snap"></div>
-        </picture>
-    </header>
     <article class="scroller">
 
         <section class="snapper">
+            <header>
+                <div class="behind-top-nav"></div>
+                <picture class="hero-container">
+                    <!-- <img class="hero" src="/assets/golden_hour/photo_2018-07-07_13-51-23.png" alt="Golden hour"> -->
+                    <div class="hero-content snap"></div>
+                </picture>
+            </header>
             <h2 id="top" class="section snap">Janka & Norbi</h2>
             <p>
                 Közeleg a nagy napunk! Több mint hét együtt töltött év, négy költözés, öt Ördögkatlan és
@@ -197,13 +201,6 @@
     </p> -->
 
     </article>
-
-    <footer>
-        <div id="cookie-banner">
-            <p id="cookie-message">A weboldal sütiket használ.</p>
-            <button id="cookie-accept">Értettem</button>
-        </div>
-    </footer>
 </body>
 
 </html>

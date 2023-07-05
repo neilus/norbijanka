@@ -108,14 +108,25 @@ section .program p {
 }
 
 .hero-content {
-  background-image: url("/assets/golden_hour/photo_2018-07-07_13-51-23.png");
-  margin-top: 56px;
-  background-size: 498px 249px;
-  background-position-x: center;
-  min-height: 190px;
-  max-height: 249px;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+
+  @media (max-width: 700px) {
+    background-image: url("/assets/golden_hour/photo_2018-07-07_13-51-23.png");
+    background-size: 498px 249px;
+    height: 249px;
+  }
+
+  @media (min-width: 700px) {
+    background-image: url("/assets/golden_hour/photo_2018-07-07_13-51-23@2x.png");
+    /* background-size: 996px 598px; */
+    height: 320px;
+  }
+}
+
+.behind-top-nav {
+  height: 56px;
 }
 
 .hero {
@@ -312,7 +323,7 @@ section .program p {
 
 @media (max-width: 700px) {
   .scroller {
-    height: 80%;
+    height: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -322,6 +333,7 @@ section .program p {
     scroll-snap-align: start;
   }
 }
+
 .menu-button-container {
   display: flex;
 }

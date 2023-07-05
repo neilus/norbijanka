@@ -8,18 +8,30 @@
 #cookie-banner > p,
 #cookie-message {
   color: white;
+  font-size: 14pt;
 }
 
-
+#cookie-banner > p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 #cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: #333;
-    color: #fff;
     padding: 10px;
     text-align: center;
+}
+
+#cookie-banner .accepted {
+    display: none;
+}
+#cookie-banner .init {
+    display: block;
 }
 
 #cookie-accept {
