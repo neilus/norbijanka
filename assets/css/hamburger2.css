@@ -32,19 +32,47 @@ section {
 h2 {
   font-family: "Noto Serif Display", Bold;
 
-  font-size: 32pt;
+  font-size: 30pt;
   color: #541913;
   vertical-align: center;
   text-align: center;
 
-  margin-top: 0;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  margin-bottom: 0px;
-  background-image: url("/assets/mist_background/background.png");
+  /* background-image: url("/assets/mist_background/background.png"); */
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+  padding-top: 100px;
+}
+
+.mist_background_1 {
+  background-image: url("/assets/images/mist_background_1.png");
+  margin-bottom: 0px;
+  margin-top: 0;
+  padding-bottom: 50px;
+  background-repeat: no-repeat;
+}
+
+.mist_background_2 {
+  background-image: url("/assets/images/mist_background_2.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 700px) {
+
+  .mist_background_3 {
+    background-image: url("/assets/images/mist_background_3.png");
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.mist_background_4 {
+  background-image: url("/assets/images/mist_background_4.png");
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 h3 {
@@ -54,13 +82,22 @@ h3 {
   text-align: center;
   color: #541913;
   padding-top: 0px;
+  padding-bottom: 32px;
 }
 
 p {
   font-family: "Noto Sans", Regular;
   font-size: 16pt;
   color: #541913;
-  padding: 30px 22px 22px 30px;
+  /* padding: 30px 22px 22px 30px; */
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+p .left {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  text-align: left;
 }
 
 .center {
