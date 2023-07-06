@@ -49,30 +49,30 @@ h2 {
   margin-bottom: 0px;
   margin-top: 0;
   padding-bottom: 50px;
+  background-repeat: no-repeat;
 }
 
 .mist_background_2 {
   background-image: url("/assets/images/mist_background_2.png");
-  height: 301px;
   width: 100%;
-  padding-top: 197px;
-  padding-bottom: 186px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.mist_background_3 {
-  background-image: url("/assets/images/mist_background_3.png");
-  height: 301px;
-  width: 100%;
-  padding-top: 283px;
-  padding-bottom: 227px;
+@media screen and (max-width: 700px) {
+
+  .mist_background_3 {
+    background-image: url("/assets/images/mist_background_3.png");
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 .mist_background_4 {
   background-image: url("/assets/images/mist_background_4.png");
-  height: 301px;
   width: 100%;
-  padding-top: 154px;
-  padding-bottom: 134px;
+  background-repeat: no-repeat;
 }
 
 h3 {
