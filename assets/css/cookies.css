@@ -1,17 +1,28 @@
 
+@font-face {
+  font-family: "Noto Sans";
+  src: url(/assets/fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Noto Serif Display";
+  src: url(/assets/fonts/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+}
+
 #cookie-banner {
     font-family: "Noto Serif Display", sans-serif;
 }
 
 #cookie-banner,
 #cookie-banner > a,
-#cookie-banner > p,
+#cookie-banner > span,
 #cookie-message {
   color: white;
   font-size: 14pt;
+  display: block;
 }
 
-#cookie-banner > p {
+#cookie-banner > span {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
