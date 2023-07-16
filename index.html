@@ -13,13 +13,30 @@
     <link rel="stylesheet" href="/assets/css/cookies.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1X25Q6X1Z"></script>
+    <script async src="/assets/js/password.js"></script>
     <script async src="/assets/js/cookies.js"></script>
-    <script>
+    <!-- <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-E1X25Q6X1Z');
+    </script> -->
+    <script>
+        async function login() {
+            var password = document.getElementById("password").value;
+            const secret = "08vT3fIXkq9GfzUqM4d1l97iI8MinU6PDBDcPo7mkv4AzxmB3toQze8RUZYgBAhZu2rkCDKUrdc0Q8j828pQaQ=="
+
+            try {
+                const secretLink = await decryptData(secret, password);
+                console.log("Navigating to the secret link: " + window.location.href + secretLink)
+                window.location.assign(window.location.href + secretLink)
+            }
+            catch (err) {
+                alert("Hibás jelszó!");
+                return;
+            }
+        }
     </script>
 </head>
 
@@ -33,7 +50,10 @@
         <img class="logo" type="image/svg" src="./assets/nj_white.svg" alt="NJ Logo">
         <div class="after-logo"></div>
     </picture>
-    <h1>Hamarosan jelentkezünk</h1>
+    <section class="password-section">
+        <input type="password" class="password" id="password" name="password" placeholder="Jelszó">
+        <button type="submit" value="Belépés" class="password pwbutton" onclick="login()">Belépés</button>
+    </section>
     <picture>
         <img class="roses" src="./assets/rose_white.svg" alt="Roses">
     </picture>

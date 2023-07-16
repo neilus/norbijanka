@@ -2,23 +2,80 @@ body {
     background-color: #C57F5F;
     color: #FFFFFF;
 }
+
 h1 {
     font-family: "Noto Serif Display", Serif;
     font-weight: bolder;
 }
-button {
+
+/* button {
     font-family: "Noto Serif Display", sans-serif;
-}
+} */
+
 @font-face {
-  font-family: "Noto Sans";
-  src: url(/assets/fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+    font-family: "Noto Sans";
+    src: url(/assets/fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
 }
 
 @font-face {
-  font-family: "Noto Serif Display";
-  src: url(/assets/fonts/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
+    font-family: "Noto Serif Display";
+    src: url(/assets/fonts/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth,wght.ttf) format("woff2-variations");
 }
 
+.password-section {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.password {
+    font-size: 18pt;
+    margin-top: 32px;
+}
+
+@media screen and (max-width: 1080px) {
+    .password-section {
+        width: 100%;
+        flex-direction: column;
+    }
+    .password {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1081px) {
+    .password-section {
+        width: 20%;
+        flex-direction: row;
+    }
+    .password {
+        margin-right: 32px;
+    }
+}
+
+#password {
+    height: 40pt;
+}
+
+
+.button .password,
+.pwbutton {
+    background-color: #C57F5F;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18pt;
+    font-family: Noto Sans, Bold
+}
+
+.pwbutton:hover {
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
 
 @media screen and (max-width: 1080px) {
 
