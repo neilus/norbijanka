@@ -99,3 +99,19 @@ async function decryptData(encryptedData, password) {
     return "";
   }
 }
+
+
+async function login() {
+  var password = document.getElementById("password").value;
+  const secret = "08vT3fIXkq9GfzUqM4d1l97iI8MinU6PDBDcPo7mkv4AzxmB3toQze8RUZYgBAhZu2rkCDKUrdc0Q8j828pQaQ=="
+
+  try {
+    const secretLink = await decryptData(secret, password);
+    console.log("Navigating to the secret link: " + window.location.href + secretLink)
+    window.location.assign(window.location.href + secretLink)
+  }
+  catch (err) {
+    alert("Hibás jelszó!");
+    return;
+  }
+}

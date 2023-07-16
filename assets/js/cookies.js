@@ -42,3 +42,16 @@ function cookieClicker() {
         hideBanner();
     });
 }
+
+function setupCookies() {
+    setCookie("secret-page", "dFJaM32CkvYlsJUdak9d/index.html", "15")
+    cookieClicker();
+}
+
+function setupLandingPage() {
+    var secretLink = getCookie("secret-page");
+    if (secretLink) {
+        window.location.assign(window.location.href + secretLink);
+    }
+    cookieClicker();
+}
