@@ -8,8 +8,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   scroll-behavior: smooth;
+  background-color: whitesmoke;
 }
-
+article {
+  background-color: white;
+}
 * {
   box-sizing: border-box;
 }
