@@ -14,6 +14,10 @@
         function toggleActive() {
             document.querySelector('.container').classList.toggle('drop');
         }
+        function deactivateMenu() {
+            document.querySelector("#menu-toggle").checked = false;
+            toggleActive();
+        }
     </script>
 
     <!-- Google Analytics -->
@@ -55,7 +59,7 @@
                 <img class="bell bell-active" type="image/svg" src="/assets/bell-white.svg" alt="Bell Icon">
             </picture>
 
-            <ul class="menu">
+            <ul class="menu" onclick="deactivateMenu()">
                 <li><a href="#top">Oldal teteje</a></li>
                 <li><a href="#location">Helyszín</a></li>
                 <li><a href="#programe">Menetrend</a></li>
@@ -65,7 +69,7 @@
         </div>
     </nav>
 
-    <article class="scroller">
+    <article class="scroller" onclick="deactivateMenu()">
 
         <section class="snapper">
             <header>
