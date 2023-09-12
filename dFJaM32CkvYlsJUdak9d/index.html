@@ -16,12 +16,21 @@
         }
         function deactivateMenu() {
             document.querySelector("#menu-toggle").checked = false;
-            toggleActive();
+            document.querySelector('.container').classList.remove('drop');
         }
     </script>
+    <style>
+        iframe {
+            z-index: 1;
+        }
+
+        nav {
+            z-index: 2;
+        }
+    </style>
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1X25Q6X1Z"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1X25Q6X1Z"></script>
     <script>
 
         window.dataLayer = window.dataLayer || [];
@@ -30,7 +39,7 @@
 
         gtag('config', 'G-E1X25Q6X1Z');
 
-    </script>
+    </script> -->
 
 </head>
 
@@ -60,18 +69,29 @@
             </picture>
 
             <ul class="menu" onclick="deactivateMenu()">
+                <!--
                 <li><a href="#top">Oldal teteje</a></li>
+                <li></li>
+                -->
                 <li><a href="#location">Helyszín</a></li>
+                <li><a href="#megkozelites-auto">Megközelítés Autóval</a></li>
+                <li><a href="#megkozelites-bkv">Megközelítés BKV-val</a></li>
+                <li><a href="#golf-kocsi">Golf kocsi</a></li>
+                <li><a href="#baby-sitter">Gyerekcsősz</a></li>
+                <li></li>
                 <li><a href="#programe">Menetrend</a></li>
                 <li><a href="#menu">Menü</a></li>
+                <li></li>
                 <li><a href="#accomodation">Szállás</a></li>
+                <li><a href="#accomodation-bkv">Megközelítés BKV-val</a></li>
+                <li><a href="#accomodation-auto">Parkolás</a></li>
             </ul>
         </div>
     </nav>
 
     <article class="scroller" onclick="deactivateMenu()">
 
-        <section class="snapper">
+        <section class="snapper top">
             <header>
                 <div class="behind-top-nav"></div>
                 <picture class="hero-container">
@@ -88,57 +108,101 @@
             <p class="center snap">
                 Szeptember 15. 17:00
             </p>
+            <!--
             <h3>Café Ponyvaregény</h3>
             <p>
                 Kérünk Benneteket, hogy jelezzétek, ha velünk tartotok ezen a megismételhetetlen napon! Garantáljuk,
                 hogy vidámságból és jó zenéből nem lesz hiány! Addig is nézzetek körül az oldalon. Itt minden
                 információt megtaláltok ahhoz, hogy teljesen felkészülve várjátok a ceremóniát.
             </p>
-            </section>
-            <section class="snapper">
+            -->
+        </section>
+
+        <section class="snapper location">
             <picture class="ponyvaregeny" id="location">
                 <img src="/assets/images/ponyvaregeny.svg" alt="Café Ponyvaregény">
             </picture>
             <h2 id="restaurant" class="section">Café Ponyvaregény</h2>
             <p class="center">1117 BUDAPEST, KOPASZI-GÁT 12.</p>
-            <h3>Egy kis segítség a helyszín megközelítéséhez</h3>
-            <p>
-                A legegyszerűbb valószínűleg autóval vagy taxival érkezni, viszont a péntek délutáni forgalmat
-                figyelembe véve ez időigényes lehet. A parkolóhely miatt nem kell aggódnotok, mert a Kopaszi-gát
-                bejáratánál van egy nagyobb fizetős parkoló (P). Jó tanács: ha a navigációs alkalmazásotok (pl.: Google
-                Maps) azt mondja a Kelenföldi Erőműtől úszni kell, akkor gyanakodjatok. :) A Kopaszi-gát parkolóját
-                beírva célpontnak pontosabb eredményt kaptok.
-            </p>
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3098.3782384481715!2d19.059814194088016!3d47.4646838057662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x4741dd063b750a6b%3A0xfcb9e13b4934da6b!2sBudapest%2C%20Kopaszi-g%C3%A1t%2012!3m2!1d47.467192399999995!2d19.0639254!4m5!1s0x4741dd0bdc31111b%3A0x3122d2afabf74410!2zQnVkYXBlc3QsIENhZsOpIFBvbnl2YXJlZ8OpbnksIEtvcGFzemktZ8OhdA!3m2!1d47.4616119!2d19.0602205!5e0!3m2!1sen!2shu!4v1689532764149!5m2!1sen!2shu"
-                    width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-            <p>
-                Tömegközlekedéssel két lehetőség áll rendelkezésre: 1-es villamos, Infopark megálló: Kelenföld, vagy a
-                Népliget felől a legbiztosabb kötött pályás megoldás. 107-es, 154-es busz, Infopark, Pázmány Péter
-                sétány: a legközelebbi megálló, azonban ritkásan közlekednek, így érdemes a délutáni csúcsforgalmat is
-                figyelembe véve kiválasztani a megfelelő járatot. Tipp a hazaútra: a 901-es éjszakai járat is itt áll
-                meg. Bármivel érkeztek, kérlek vegyétek figyelembe, hogy az étterem körülbelül 10-15 perc sétára van a
-                Kopaszi-gát bejáratától és parkolójától. Érkezettek inkább hamarabb, hogy ki tudjátok élvezni a
-                Duna-part őszi hangulatát.
-            </p>
-            <h3>Megközelítés a szállástól</h3>
-            <p>
-                A szálláshelyről közvetlen transzfert szervezünk. Hamarosan erről is értesítünk benneteket.
-            </p>
+            <p>Egy kis segítség a helyszín megközelítéséhez:</p>
+            <section id="megkozelites-auto">
+                <h3>Autóval</h3>
+                <p>
+                    A legegyszerűbb valószínűleg autóval vagy taxival érkezni.
+                    Ez esetben kérünk hogy kalkuláljatok a péntek délutáni csúcsforgalommal,
+                    valamint, hogy a Kopaszi gát parkolójától a Ponyvaregényig 10-15 perc sétára számítsatok.
+                </p>
+                <p>
+                    <strong>A parkolóhely</strong> miatt nem kell aggódnotok, mert a Kopaszi-gát
+                    bejáratánál van egy nagyobb fizetős parkoló (P).
+                    Az itt kapott parkolójegyet a Ponyvaregényben tudjátok majd érvényesíteni, így a parkolás ingyenes
+                    lesz.
+                </p>
+                <p>
+                    <strong>Jó tanács:</strong> ha a navigációs alkalmazásotok (pl.: Google
+                    Maps vagy Waze) azt mondja a Kelenföldi Erőműtől úszni kell, akkor gyanakodjatok. :) A Kopaszi-gát
+                    parkolóját
+                    beírva célpontnak pontosabb eredményt kaptok.
+                </p>
+            </section>
+
+            <section id="megkozelites-bkv">
+                <h3>Megközelítés BKV-val</h3>
+                <p>
+                    Tömegközlekedéssel két lehetőség áll rendelkezésre:
+                <ul>
+                    <li>
+                        1-es villamos, Infopark megálló: Kelenföld, vagy a
+                        Népliget felől a legbiztosabb kötött pályás megoldás.
+                    </li>
+                    <li>
+                        107-es, 154-es busz, Infopark, Pázmány Péter sétány:
+                        a legközelebbi megálló, azonban ritkásan közlekednek,
+                        így érdemes a délutáni csúcsforgalmat is
+                        figyelembe véve kiválasztani a megfelelő járatot.
+
+                    </li>
+
+                </ul>
+                </p>
+                <p>
+                    <strng>Tipp a hazaútra:</strng> a 901-es éjszakai járat is itt áll meg.
+                </p>
+                <p>
+                    Bármivel érkeztek, kérlek vegyétek figyelembe, hogy <strong>az étterem körülbelül 10-15 perc sétára
+                        van</strong> a
+                    Kopaszi-gát bejáratától és parkolójától.
+                    Érkezettek inkább hamarabb, hogy ki tudjátok élvezni a
+                    Duna-part őszi hangulatát.
+                </p>
+            </section>
+            <section id="golf-kocsi">
+                <p>
+                    Aki úgy érzi hogy a 10 perc séta túl sok neki, azoknak jó hírünk van!
+                    A parkolóból a Ponyvaregénybe van lehetőség golfkocsival is átjutni. Ehhez csupán fel kell hívni a
+                    Ponyvaregény szerverzőjét és ő kiküldi a sofőrt.
+                    Garamvári Ildikó, gazdasszony: <a href="tel:+36209832446">+36 20 983 24 46</a>
+                </p>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3098.3782384481715!2d19.059814194088016!3d47.4646838057662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x4741dd063b750a6b%3A0xfcb9e13b4934da6b!2sBudapest%2C%20Kopaszi-g%C3%A1t%2012!3m2!1d47.467192399999995!2d19.0639254!4m5!1s0x4741dd0bdc31111b%3A0x3122d2afabf74410!2zQnVkYXBlc3QsIENhZsOpIFBvbnl2YXJlZ8OpbnksIEtvcGFzemktZ8OhdA!3m2!1d47.4616119!2d19.0602205!5e0!3m2!1sen!2shu!4v1689532764149!5m2!1sen!2shu"
+                        width="700" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+            <section id="baby-sitter">
+                <p>
+                    Gyerekkel érkező vendégeink számára a helyszínen biztosítunk gyerekcsősz szolgáltatást.
+                </p>
+            </section>
             <picture class="heart">
                 <img src="/assets/heart.svg" alt="heart">
             </picture>
         </section>
 
-        <!-- <h2 id="location">Helyszín</h2>
-    <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, assumenda? Pariatur, magni in exercitationem nihil omnis eveniet quisquam molestias aliquam ducimus voluptate at unde a dicta, ad nobis, maiores perspiciatis.
-    </p> -->
-        <section class="snapper mist_background_2">
+        <section class="snapper menetrend mist_background_2">
             <section class="program">
                 <h2 id="programe">
                     Menetrend
@@ -147,6 +211,36 @@
                     Szeptember 15. 17:00
                 </p>
                 <h3>Café Ponyvaregény</h3>
+            </section>
+
+            <section class="program">
+                <picture class="heart">
+                    <img src="/assets/heart.svg" alt="heart">
+                </picture>
+                <picture>
+                    <img src="/assets/ceremonia.svg" alt="ceremonia">
+                </picture>
+                <p>
+                    16:00
+                </p>
+                <p>
+                    Vendégváró: a korán érkező vendégeinket frissítőkkel és
+                    apró süteményekkel várjuk.
+                </p>
+            </section>
+            <section class="program">
+                <picture class="heart">
+                    <img src="/assets/heart.svg" alt="heart">
+                </picture>
+                <picture>
+                    <img src="/assets/ceremonia.svg" alt="ceremonia">
+                </picture>
+                <p>
+                    17:00
+                </p>
+                <p>
+                    Gyülekező: gyülekezünk és hely foglalás a ceremóniára.
+                </p>
             </section>
 
             <section class="program">
@@ -228,23 +322,75 @@
             </picture>
         </section>
 
-        <section class="snapper mist_background_3">
+        <section class="snapper kaja mist_background_3">
             <h2 id="menu" class="section ">Menü</h2>
-            <p>
-                Részletes menü és ételérzékenységeket, egyéni igényeket gyűjtő űrlap hamarosan.
-            </p>
+            <section id="eloetel">
+                <h3>Előétel</h3>
+                <p>
+                    Kence variációk fatálon szervírozva (padlizsánkrém, mascarpones-juhtúrókrém, májpástétom
+                    zöldséghasábokkal és pirítóssal kísérve)
+                </p>
+                <p>
+                    Almás-burgonya saláta füstölt sajttal gazdagítva
+                </p>
+            </section>
+            <section id="leves">
+                <h3>Leves</h3>
+                <p>
+                    Tejszínes, piros gyümölcsökből komponált krémleves pirított mandulával
+                </p>
+                <p>
+                    Vasárnapi húsleves gazdagon, velefőtt zöldségekkel, eperlevél tésztával
+                </p>
+            </section>
+            <section id="foetel">
+                <h3>Főétel</h3>
+                <p>
+                    Kemencés bazsalikomos zöldségek
+                </p>
+                <p>
+                    Barack chutney-val és őszibarack darabokkal töltött pulykamell, jázminrizzsel
+                </p>
+                <p>
+                    Kemencében sült ropogós rózsaborsos kacsacombok zöldséghalmon tálalva
+                </p>
+                <p>
+                    Konfitált sertésjava chardonnaymártással, fűszeres karikaburgonyával
+                </p>
+                <p>
+                    Vörösboros marhapörkölt
+                </p>
+            </section>
+            <section id="dessert">
+                <h3>Desszert</h3>
+                <p>
+                    Almás-diós házi süteményünk
+                </p>
+                <p>
+                    Pohárkrém variációk pirosbogyós gyümölcsökre-csokoládéra-citrusokra
+                </p>
+                <p>
+                    Gyümölcstál idénygyümölcsökkel
+                </p>
+            </section>
+            <section id="ejfeli-menu">
+                <h3>Éjféli menü</h3>
+                <p>
+                    Mini töltött-káposzta
+                </p>
+            </section>
             <picture class="heart">
                 <img src="/assets/heart.svg" alt="heart">
             </picture>
         </section>
 
-        <section class="snapper mist_background_4">
+        <section class="snapper szallas mist_background_4">
             <h2 id="accomodation" class="">Szállás</h2>
             <p class="center snap">
                 1095, Budapest, Soroksári út 12.
             </p>
             <h3>Ibis Styles Budapest City</h3>
-            <p class="checkingi left">
+            <p class="checkin left">
                 <strong>Bejelentkezés:</strong> 15:00-tól
             </p>
             <p class="checkout left">
@@ -255,24 +401,84 @@
                 messziről érkező vendégeinknek szállást foglaltunk.
             </p>
             <p>
-                Kérlek töltsd ki ezt az
-                <!-- <a href="https://forms.gle/yMayMned5zvqs9f96">
-                    teszt űrlapot
-                </a> -->
-                <a href="https://forms.gle/985JDpXBWgCW9Ear7">
-                    csatolt űrlapot
-                </a>, hogy a szállodának leadhassuk a szükséges információkat a foglaláshoz.
+                Akik korábban megadták az adataikat, azoknak a szállást előre lefoglaltuk. Viszont előre
+                leszervezett transzfer a szálloda és a szállás között sajnos nem lesz.
             </p>
-            <picture class="heart">
-                <img src="/assets/heart.svg" alt="heart">
-            </picture>
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10787.678611738227!2d19.057950087943173!3d47.47199514320857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x4741dcff6e7c1b8f%3A0x10dfd87b7f9acf22!2zQnVkYXBlc3QsIFNvcm9rc8Ohcmkgw7p0IDEyLCAxMDk1!3m2!1d47.479061699999995!2d19.0686143!4m5!1s0x4741dd0bdc31111b%3A0x3122d2afabf74410!2zQnVkYXBlc3QsIENhZsOpIFBvbnl2YXJlZ8OpbnksIEtvcGFzemktZ8OhdA!3m2!1d47.4616119!2d19.0602205!5e0!3m2!1sen!2shu!4v1689530956263!5m2!1sen!2shu"
-                    width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+            <section id="accomodation-bkv">
+                <h3>BKV-val</h3>
+                <p>
+                    A Kelenföldi pályaudvarról a hotelbe a legegyszerűbben a 4-es metróval,
+                    Újbuda központig, majd ott, az Allee-nál átszállva a 4-es villamosra és villamosozni egészen
+                    a Boráros térig (Petőfi híd, Pesti hídfő) lehet.
+                </p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d43149.950606306!2d19.001127563773945!3d47.472925421281374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x4741ddc1f05f1e79%3A0x65322de047346071!2zS2VsZW5mw7ZsZCB2YXPDunTDoWxsb23DoXMsIEJ1ZGFwZXN0LCAxMTE1!3m2!1d47.4643217!2d19.020626!4m5!1s0x4741dcff6e7c1b8f%3A0x10dfd87b7f9acf22!2zU29yb2tzw6FyaSDDunQgMTIsIEJ1ZGFwZXN0LCAxMDk1!3m2!1d47.479061699999995!2d19.0686143!5e0!3m2!1sen!2shu!4v1694556307016!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>
+                    A lagzi helyszínére BKV-val a legegyszerűbben 2-es villamossal
+                    a közvágóhídig, majd ott átszállva a Lágymányosi hídon az 1-es villamosra, azzal
+                    átkelni a hídon és az Infopark megállónál leszállva lehet eljutni.
+                </p>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10787.678611738227!2d19.057950087943173!3d47.47199514320857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x4741dcff6e7c1b8f%3A0x10dfd87b7f9acf22!2zQnVkYXBlc3QsIFNvcm9rc8Ohcmkgw7p0IDEyLCAxMDk1!3m2!1d47.479061699999995!2d19.0686143!4m5!1s0x4741dd0bdc31111b%3A0x3122d2afabf74410!2zQnVkYXBlc3QsIENhZsOpIFBvbnl2YXJlZ8OpbnksIEtvcGFzemktZ8OhdA!3m2!1d47.4616119!2d19.0602205!5e0!3m2!1sen!2shu!4v1689530956263!5m2!1sen!2shu"
+                        width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+            <section id="accomodation-auto">
+                <h3>Autóval</h3>
+                <p>
+                    Habár a szállás le van foglalva, parkoló helyet nem tudtunk előre lefoglalni.
+                </p>
+                <p>
+                    Lehet parkolni az utcán. Hotel környékén este munkanapokon 10 után, ingyenesen lehet parkolni.
+                    Részletekért lásd: (A övezet) <a
+                        href="https://ferencvarosiparkolas.hu/parkolasi-informaciok/">https://ferencvarosiparkolas.hu/parkolasi-informaciok/</a>.
+                    Vagy...
+                </p>
+                <h4>A szálloda parkolója</h4>
+                <p>
+                    Itt sajnos csak 12 parkolóhely van, amit érkezési sorrendben értékesítenek, a parkolási díja 6000
+                    Ft/autó/éj.
+                </p>
+                <h4>Pávaház Parkolója</h4>
+                <p>
+                    Itt 300 parkolóhely van, 0-24 nyitvatartás. A parkolási díj itt 600 Ft/óra, illetve 6000 Ft a napi
+                    díj. Kb 4 perc sétára a szállodától, részletekért lásd: <a
+                        href="https://pavahaz.com/hu#parking">https://www.pavahazparkolo.hu/</a>.
+                </p>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1348.2489993793795!2d19.068624438962487!3d47.48021115555266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4741dcff6e7c1b8f%3A0x10dfd87b7f9acf22!2zQnVkYXBlc3QsIFNvcm9rc8Ohcmkgw7p0IDEy!3m2!1d47.479061699999995!2d19.0686143!4m5!1s0x4741dcfed4278679%3A0xd77037eb240cdc25!2sBudapest%2C%20Mester%20u.%2030-32%2C%201095!3m2!1d47.479982!2d19.071813!5e0!3m2!1sen!2shu!4v1694549198362!5m2!1sen!2shu"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>
+                    Illetve még konzultálhatsz Szabival is a további lehetőségekről a
+                    <a href="tel:+36501036224">+36 50 103 62 24</a> vagy a
+                    <a href="tel:+40770398269">+40 77 039 82 69</a> számok valamelyikén.
+                </p>
+                <h4>Eljutni az esküvő helyszínére</h4>
+                <p>
+                    Autóval egyszerűen, pár perc alatt el lehet jutni a Kopaszi Gáthoz, de kérünk számoljatok a péntek
+                    délutáni csúcsforgalommal,
+                    valamint ne feledd: a GPS-be a Kopaszi Gát parkolóját add meg, ne a Ponyvaregényt! És ne feledkezz
+                    meg a parkolótól a Ponyvaregényig tartó 10 perces sétáról sem.
+                </p>
+                <div class="map">
+                    <!--
+                    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=47.467517&lon=19.063399&ct=livemap"
+                        width="390" height="450" allowfullscreen></iframe>
+                    -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10787.118754890362!2d19.05668297194626!3d47.47472249248077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4741dcff6e7c1b8f%3A0x10dfd87b7f9acf22!2zQnVkYXBlc3QsIFNvcm9rc8Ohcmkgw7p0IDEyLCAxMDk1!3m2!1d47.479061699999995!2d19.0686143!4m5!1s0x4741dd09ad18d315%3A0x40dd11c5ff547896!2sBudapest%2C%20Parkol%C3%B3%20BudaPart-Kopaszi%20g%C3%A1t%2C%20Kopaszi-g%C3%A1t!3m2!1d47.467517099999995!2d19.063398499999998!5e0!3m2!1sen!2shu!4v1694546590322!5m2!1sen!2shu"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
             <picture class="heart">
                 <img src="/assets/heart.svg" alt="heart">
             </picture>

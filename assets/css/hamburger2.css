@@ -87,6 +87,16 @@ h2 {
   background-repeat: no-repeat;
 }
 
+h4 {
+  font-family: "Noto Serif Display", Bold Italic;
+  font-size: 17pt;
+  font-style: italic;
+  text-align: center;
+  color: #541913;
+  padding-top: 0px;
+  padding-bottom: 32px;
+}
+
 h3 {
   font-family: "Noto Serif Display", Bold Italic;
   font-size: 20pt;
@@ -95,6 +105,13 @@ h3 {
   color: #541913;
   padding-top: 0px;
   padding-bottom: 32px;
+}
+
+li {
+  font-family: "Noto Sans", Regular;
+  font-size: 16pt;
+  color: #541913;
+
 }
 
 p {
@@ -374,13 +391,16 @@ section .program p {
   .scroller {
     height: 100%;
     overflow-y: scroll;
+    /*
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    */
   }
-
+/*
   .scroller>section {
     scroll-snap-align: start;
   }
+  */
 }
 
 .menu-button-container {
